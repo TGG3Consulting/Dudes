@@ -35,48 +35,44 @@ class HomeScreen extends ConsumerWidget {
           children: [
             if (selectedLocation == null) ...[
               // Баннер выбора салона
-              Card(
-                color: colorScheme.primary.withOpacity(0.08),
-                shape: RoundedRectangleBorder(
+              Container(
+                decoration: BoxDecoration(
+                  color: colorScheme.primaryContainer,
                   borderRadius: BorderRadius.circular(14),
-                  side: BorderSide(
-                    color: colorScheme.primary.withOpacity(0.3),
-                  ),
+                  border: Border.all(color: colorScheme.primary, width: 1),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(AppSpacing.s4),
-                  child: Row(
-                    children: [
-                      Icon(Icons.location_on_outlined,
-                          color: colorScheme.primary, size: 32),
-                      const SizedBox(width: AppSpacing.s3),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'Выберите салон',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w600),
-                            ),
-                            const SizedBox(height: AppSpacing.s1),
-                            Text(
-                              'Нужно выбрать салон для записи',
-                              style: TextStyle(
-                                  fontSize: 13,
-                                  color: colorScheme.onSurface
-                                      .withOpacity(0.6)),
-                            ),
-                          ],
+                padding: const EdgeInsets.all(AppSpacing.s4),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.location_on_outlined,
+                            color: colorScheme.primary, size: 28),
+                        const SizedBox(width: AppSpacing.s2),
+                        const Text(
+                          'Выберите салон',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w600),
                         ),
-                      ),
-                      const SizedBox(width: AppSpacing.s3),
-                      ElevatedButton(
+                      ],
+                    ),
+                    const SizedBox(height: AppSpacing.s2),
+                    Text(
+                      'Нужно выбрать салон для записи',
+                      style: TextStyle(
+                          fontSize: 13,
+                          color: colorScheme.onSurfaceVariant),
+                    ),
+                    const SizedBox(height: AppSpacing.s3),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
                         onPressed: () => context.go('/location-picker'),
-                        child: const Text('Выбрать'),
+                        child: const Text('Выбрать салон'),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ] else ...[
@@ -87,7 +83,7 @@ class HomeScreen extends ConsumerWidget {
                 ),
                 child: ListTile(
                   leading: CircleAvatar(
-                    backgroundColor: colorScheme.primary.withOpacity(0.12),
+                    backgroundColor: colorScheme.primaryContainer,
                     child: Icon(Icons.location_on, color: colorScheme.primary),
                   ),
                   title: Text(
@@ -115,7 +111,7 @@ class HomeScreen extends ConsumerWidget {
                 'Используйте меню снизу для записи, магазина и бонусов.',
                 style: TextStyle(
                   fontSize: 14,
-                  color: colorScheme.onSurface.withOpacity(0.6),
+                  color: colorScheme.onSurfaceVariant,
                 ),
               ),
             ],
