@@ -18,7 +18,9 @@ create policy "Locations are viewable by everyone"
   on public.locations for select
   using (true);
 
--- Seed data: 2 тестовых салона
+-- Seed data: 4 салона
 insert into public.locations (name, address, city, phone, sort_order) values
-  ('Dude''s Barber — Центр', 'ул. Абовяна 22, Ереван', 'Ереван', '+374 10 123456', 1),
-  ('Dude''s Barber — Малатия', 'пр. Маштоца 50, Ереван', 'Ереван', '+374 10 654321', 2);
+  ('Dude''s Barber — Центр',   'ул. Абовяна 22, Ереван',    'Ереван', '+374 10 123456', 1),
+  ('Dude''s Barber — Малатия', 'пр. Маштоца 50, Ереван',    'Ереван', '+374 10 654321', 2),
+  ('Dude''s Barber — Пушкина', 'ул. Пушкина 31, Ереван',    'Ереван', '+374 10 111111', 3),
+  ('Dude''s Barber — Комитас', 'пр. Комитаса, Ереван',      'Ереван', '+374 10 222222', 4);
