@@ -53,11 +53,7 @@ import '../../features/admin/locations/ui/location_form_screen.dart';
 import '../../features/admin/loyalty/ui/loyalty_tiers_admin_screen.dart';
 import '../../features/admin/loyalty/ui/loyalty_tier_form_screen.dart';
 import '../../features/admin/settings/ui/app_settings_screen.dart';
-
-// Stub providers — replaced in Phase 1
-// TODO Phase 1: заменить на реальный auth state
-final isAuthenticatedProvider = Provider<bool>((ref) => true);
-final isAdminProvider = Provider<bool>((ref) => true);
+import '../../features/auth/domain/auth_provider.dart';
 
 final appRouterProvider = Provider<GoRouter>((ref) {
   final isAuthenticated = ref.watch(isAuthenticatedProvider);
