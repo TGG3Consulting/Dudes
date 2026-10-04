@@ -1,0 +1,96 @@
+name: dudes_barber
+description: Dude's Barber Shop mobile app
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Backend
+  supabase_flutter: ^2.8.4
+
+  # State management
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+
+  # Navigation
+  go_router: ^14.6.2
+
+  # Data models
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Push
+  onesignal_flutter: ^5.2.9
+
+  # UI
+  cached_network_image: ^3.4.1
+  flutter_svg: ^2.0.17
+  shimmer: ^3.0.0
+  intl: ^0.20.3
+
+  # Utils
+  shared_preferences: ^2.3.3
+  connectivity_plus: ^6.1.1
+  package_info_plus: ^8.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.13
+  riverpod_generator: ^2.6.1
+  freezed: ^2.5.7
+  json_serializable: ^6.8.0
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/
+  #   - assets/fonts/
+  # fonts:
+  #   - family: Oswald
+  #     fonts:
+  #       - asset: assets/fonts/Oswald-Regular.ttf
+  #         weight: 400
+  #       - asset: assets/fonts/Oswald-Medium.ttf
+  #         weight: 500
+  #       - asset: assets/fonts/Oswald-SemiBold.ttf
+  #         weight: 600
+  #       - asset: assets/fonts/Oswald-Bold.ttf
+  #         weight: 700
+  #   - family: Manrope
+  #     fonts:
+  #       - asset: assets/fonts/Manrope-Regular.ttf
+  #         weight: 400
+  #       - asset: assets/fonts/Manrope-Medium.ttf
+  #         weight: 500
+  #       - asset: assets/fonts/Manrope-SemiBold.ttf
+  #         weight: 600
+  #       - asset: assets/fonts/Manrope-Bold.ttf
+  #         weight: 700
+  #       - asset: assets/fonts/Manrope-ExtraBold.ttf
+  #         weight: 800
+  #   - family: JetBrainsMono
+  #     fonts:
+  #       - asset: assets/fonts/JetBrainsMono-Regular.ttf
+  #         weight: 400
+  #       - asset: assets/fonts/JetBrainsMono-Medium.ttf
+  #         weight: 500
+  #   - family: NotoSansArmenian
+  #     fonts:
+  #       - asset: assets/fonts/NotoSansArmenian-Regular.ttf
+  #         weight: 400
+  #       - asset: assets/fonts/NotoSansArmenian-Medium.ttf
+  #         weight: 500
+  #       - asset: assets/fonts/NotoSansArmenian-SemiBold.ttf
+  #         weight: 600
+  #       - asset: assets/fonts/NotoSansArmenian-Bold.ttf
+  #         weight: 700
