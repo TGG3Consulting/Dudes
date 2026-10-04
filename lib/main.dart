@@ -12,7 +12,7 @@ void main() async {
   await Supabase.initialize(
     url: const String.fromEnvironment(
       'SUPABASE_URL',
-      defaultValue: 'https://ycwdiotwqirjixzhggac.supabase.co',
+      defaultValue: 'https://ycwdiotwqirjjxzhggac.supabase.co',
     ),
     publishableKey: const String.fromEnvironment(
       'SUPABASE_PUBLISHABLE_KEY',
