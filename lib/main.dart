@@ -10,8 +10,14 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Supabase.initialize(
-    url: const String.fromEnvironment('SUPABASE_URL', defaultValue: 'https://placeholder.supabase.co'),
-    publishableKey: const String.fromEnvironment('SUPABASE_ANON_KEY', defaultValue: 'placeholder-anon-key'),
+    url: const String.fromEnvironment(
+      'SUPABASE_URL',
+      defaultValue: 'https://ycwdiotwqirjixzhggac.supabase.co',
+    ),
+    publishableKey: const String.fromEnvironment(
+      'SUPABASE_PUBLISHABLE_KEY',
+      defaultValue: 'sb_publishable_P2icIVYU4Z8_A4pbOUTjSQ_zR0TWhCh',
+    ),
   );
 
   runApp(const ProviderScope(child: DudesApp()));
